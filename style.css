@@ -1,0 +1,18 @@
+/*I created ways to utilize the colors black and dark orange because they are not avaiable with Bootstrap*/
+.bg-black {
+    background-color: black;
+ }
+
+ .bg-darkorange {
+    background-color: darkorange;
+ }
+
+ button[type="submit"] {
+    border-color: darkorange;
+    background-color: black;
+    color: darkorange;
+}
+
+.border-darkorange {
+    --bs-border-color: darkorange;
+}

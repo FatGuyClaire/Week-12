@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song List</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-black text-white">
+    <div class="container">
+        <h1 class="text-center">Available Songs</h1>
+      <div class="row my-5">
+        <div class="col">
+          <div class="table-responsive border border-2 border-darkorange">
+            
+                <!--I created a table to present data  -->
+            <table class="table table-hover table-dark mb-0">
+                <thead>
+                    <tr>
+                        <th>Artist</th>
+                        <th>Song</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+              <tbody id="songList">
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+
+<!--I created a form to input data  -->
+      <form>
+        <div class="row mb-2">
+          <div class="col">
+            <input type="text" class="form-control bg-darkorange" placeholder="Artist Name" id="artistInput"/>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control bg-darkorange" placeholder="Song Title" id="songInput"/>
+          </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+              <button type="submit" class="btn btn-primary" id="songSubmit">Submit</button>
+            </div>
+          </div>
+    </form>
+    </div>
+
+<!--I created a modal with a form to edit data  -->
+    <div class="modal" tabindex="-1" id="editModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+            <div class="modal-body">
+                <div class="row mb-2">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Artist Name" id="artistInputEdit"/>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Song Title" id="songInputEdit"/>
+                  </div>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="editSave">Save changes</button>
+            </div>
+            <input type="hidden" id="idInputEdit">
+        </form>
+          </div>
+        </div>
+      </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
